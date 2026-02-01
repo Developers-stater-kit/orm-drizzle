@@ -1,5 +1,22 @@
 {
     "type": "orm",
-    "version": "1.0.0",
-    "package": "drizzle"
+    "package": "drizzle",
+    "dependencies": [
+        "drizzle-orm",
+        "pg",
+        "dotenv"
+    ],
+    "devDependencies": [
+        "drizzle-kit",
+        "@types/pg",
+        "tsx"
+    ],
+    "envVars": [
+        "DATABASE_URL"
+    ],
+    "structure": {
+        "config": "drizzle.config.ts",
+        "client": "drizzle.ts",
+        "schema": "schema.ts"
+    }
 }
