@@ -3,21 +3,23 @@
     "package": "drizzle",
     "providers": {
         "neon": {
-            "client": "neon-drizzle.ts",
+            "client": "./providers/neon/neon-drizzle.ts",
             "dependencies": ["@neondatabase/serverless"],
             "devDependencies": []
         }
     },
     "engines": {
         "pg": {
-            "config": "pg-drizzle.config.ts",
-            "client": "pg-drizzle.ts",
+            "config": "./engines/pg/pg-drizzle.config.ts",
+            "client": "./engines/pg/pg-drizzle.ts",
+            "schema": "./engines/pg/pg-schema.ts",
             "dependencies": ["pg"],
             "devDependencies": ["@types/pg"]
         },
         "mysql": {
-            "config": "mysql-drizzle.config.ts",
-            "client": "mysql-drizzle.ts",
+            "config": "./engines/mysql/mysql-drizzle.config.ts",
+            "client": "./engines/mysql/mysql-drizzle.ts",
+            "schema": "./engines/mysql/mysql-schema.ts",
             "dependencies": ["mysql2"],
             "devDependencies": []
         }
