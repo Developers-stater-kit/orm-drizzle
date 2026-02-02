@@ -1,5 +1,5 @@
 {
-    "type": "orm",
+    "type": "db-orm",
     "package": "drizzle",
     "dependencies": [
         "drizzle-orm",
