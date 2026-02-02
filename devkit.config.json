@@ -1,14 +1,36 @@
 {
     "type": "db-orm",
     "package": "drizzle",
+    "providers": {
+        "standard": {
+            "client": "pg-drizzle.ts",
+            "dependencies": ["pg"],
+            "devDependencies": ["@types/pg"]
+        },
+        "neon": {
+            "client": "neon-drizzle.ts",
+            "dependencies": ["@neondatabase/serverless"],
+            "devDependencies": []
+        }
+    },
+    "engines": {
+        "pg": {
+            "config": "pg-drizzle.config.ts",
+            "dependencies": ["pg"],
+            "devDependencies": ["@types/pg"]
+        },
+        "mysql": {
+            "config": "mysql-drizzle.config.ts",
+            "dependencies": ["mysql2"],
+            "devDependencies": []
+        }
+    },
     "dependencies": [
         "drizzle-orm",
-        "pg",
         "dotenv"
     ],
     "devDependencies": [
         "drizzle-kit",
-        "@types/pg",
         "tsx"
     ],
     "envVars": [
