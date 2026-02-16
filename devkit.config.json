@@ -1,6 +1,10 @@
 {
     "type": "db-orm",
     "package": "drizzle",
+    "repo": {
+        "name": "orm-drizzle",
+        "branch": "base"
+    },
     "providers": {
         "neon": {
             "client": "./providers/neon/neon-drizzle.ts",
